@@ -160,11 +160,11 @@ $NroRegistros = count($NroRegistrosa);
  }
  //desplazamiento
   echo "<strong>pagina ".$PagAct."/".$PagUlt."</strong>";
- echo "<div class=\"eldiv\" style = \"float: left; height: 20px; width: 150px;\" onclick=\"busqueda_coincidencias('1','juntas.php')\">Primero</div>";
- if($PagAct>1) echo "<div class=\"eldiv\" style = \"float: left; height: 20px; width: 150px;\" onclick=\"busqueda_coincidencias('$PagAnt','juntas.php')\">Anterior</div> ";
+ echo "<div class=\"eldiv\" style = \"float: left; height: 20px; width: 150px;\" onclick=\"busqueda_coincidencias('1','todo_material.php')\">Primero</div>";
+ if($PagAct>1) echo "<div class=\"eldiv\" style = \"float: left; height: 20px; width: 150px;\" onclick=\"busqueda_coincidencias('$PagAnt','todo_material.php')\">Anterior</div> ";
 
- if($PagAct<$PagUlt)  echo " <div class=\"eldiv\" style = \"float: left; height: 20px; width: 150px;\" onclick=\"busqueda_coincidencias('$PagSig','juntas.php')\">Siguiente</div> ";
- echo "<div class=\"eldiv\" style = \"float: left; height: 20px; width: 150px;\" onclick=\"busqueda_coincidencias('$PagUlt','juntas.php')\">Ultimo</div>";
+ if($PagAct<$PagUlt)  echo " <div class=\"eldiv\" style = \"float: left; height: 20px; width: 150px;\" onclick=\"busqueda_coincidencias('$PagSig','todo_material.php')\">Siguiente</div> ";
+ echo "<div class=\"eldiv\" style = \"float: left; height: 20px; width: 150px;\" onclick=\"busqueda_coincidencias('$PagUlt','todo_material.php')\">Ultimo</div>";
 
  
  
