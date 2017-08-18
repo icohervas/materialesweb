@@ -1,0 +1,145 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30-jun-2017, 11:02:12
+    Author     : Administrador
+*/
+
+body{
+    margin:0;
+    font-family: sans-serif;
+    overflow: scroll;
+}
+
+.header{
+    padding: 10px;
+    width:98.5%;
+    background: #CCC;
+    margin :5px;
+}
+.header div{
+    display:flex;
+    display:block;
+    background: #4E94AB;
+    display:inline;
+    padding: 10px;
+}
+.header div label{
+    display:flex;
+    display:block;
+    background: #4E94AB;
+    display:inline;
+    padding: 10px;
+    color:#fff;
+}
+
+.header input{
+    /*display:none;*/
+    width:30px;
+    height: 30px;
+    padding:10px;
+    border-right: 1px solid #fff;
+    margin :5px;
+}
+
+.header div label:hover{
+    cursor:pointer;
+    background: rgba(0,0,0,0.3);
+   
+}
+
+.menu ul{
+    margin:0;
+    list-style: none;
+    padding:0;
+    display:flex;
+    
+}
+.menu li{
+    border-right: 1px solid #fff;
+}
+
+.menu li:hover{
+    background: rgba(0,0,0,0.3);  
+}
+
+
+
+.menu li a{
+    
+    display:block;
+    padding:15px 20px;
+    color:#fff;
+    text-decoration: none;
+    
+}
+
+.caja_principal{
+   width: 100%;
+   height: 350px;
+   display: flex;
+   
+margin:30px;
+   align-content: center;
+   padding: 10px;
+   justify-content: center;
+    border-color: red;
+    
+   
+}
+.caja_proyectos{
+    
+    overflow: scroll;
+    width: 20%;
+    margin:10px;
+   
+}
+.caja_materiales{
+   overflow: scroll;  
+   width: 100%;
+   margin:10px; 
+}
+.caja_secundaria{
+    display: flex;
+    height: 400px;
+    padding:10px;
+    margin:30px;
+    overflow: scroll;
+    border: #ccc;
+    
+}
+.caja_bom{
+    height: 350px;
+    width: 100%;
+   
+}
+
+.radioeinput{
+  display:flex; 
+  background:#bcd9e1;
+  height: 50px;
+  width:100%;
+}
+
+.cajaradio{
+  margin:auto;
+  width: 250px;
+      
+    
+}
+
+.cajainput{
+  margin:auto;
+  width: 250px;
+        
+}
+
+.menuradio{
+    height: 100%;
+    
+}
+
+

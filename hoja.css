@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+}
+
+body { 
+	margin:0; 
+	padding:20px; 
+	font:13px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+	}
+	
+/* ---- Paragraphs ---- */
+
+p {
+	margin-bottom:15px;
+	}
+	
+/* ---- Table ---- */
+		
+        select {
+             
+             width: 220px;         
+                 
+                }
+            
+               
+.centrado{
+	text-align:center;
+}
+
+.scroll {
+   font-size:1em;
+   overflow: scroll; 
+   width: 2000px;
+   height: 900px;
+    
+}
+
+.content
+{
+    position: absolute;
+    top: 170px;
+    left: 750px;
+    width: 150px;
+    height: 20px;
+}
+.ocultar{
+    
+    display:none
+}
+
+
+.altura1{
+    
+    border:none;
+}
+
+
+div.eldiv
+{
+ 
+ width: 75px;
+ text-align:center;
+ border-top-style: solid;
+ border-right-style: solid;
+ border-bottom-style: solid;
+ border-left-style: solid;
+ border: 0.3px solid
+}
+
+div.eldiv:hover { 
+    /*background-color: yellow;*/
+                } 
+                
+                
+ div img.borrar {
+	cursor:pointer;
+	
+} 
+
+img.borrar {
+	cursor:pointer;
+	
+} 
+
+.ContextItem
+        {
+            background-color:White;
+            color:Black;
+            font-weight:normal;
+            
+            }
+        .ContextItem:hover
+        {
+            background-color:#0066FF;
+            color:White;
+            font-weight:bold;
+            
+        }
+       .detailItem
+       {
+           background:transparant;
+           
+       }
+       .detailItem:hover
+       {
+           background-color:#FEE378;
+           border: 1px outset #222222;
+           font-weight:bold;
+           cursor:default;
+       }
+       
+       .container{
+				
+			}
+       
+       .context-menu{
+				width: 200px;
+				height: auto;
+				box-shadow: 0 0 20px 0 #ccc;
+				position: absolute;
+				display: none;
+                                background: #f6f6f6;
+			}
+
+			.context-menu ul{
+				list-style: none;
+				padding: 5px 0px 5px 0px;
+			}
+
+			.context-menu ul li:not(.separator){
+				padding: 10px 5px 10px 5px;
+				border-left: 4px solid transparent;
+				cursor: pointer;
+			}
+
+			.context-menu ul li:hover{
+				background: #eee;
+				border-left: 4px solid #666;
+			}
+
+			.separator{
+				height: 1px;
+				background: #dedede;
+				margin: 2px 0px 2px 0px;
+			}
+                        
+         input[type="text"]{
+	
+       /* width: 100%;
+        height: 16px;
+        text-align: left;*/
+}
+
+/*input[type="button"]{
+    
+    background: linear-gradient(#FFDA63, #FFB940);
+    border:0;
+    color: brown;
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 0;
+    
+}
+input[type="button"]:hover{
+    
+    opacity:1;
+    
+    
+}*/
+
+//input[type="button"]:active{
+    
+  //  transform: scale(0.95);
+    
+    
+//}
+
+.obligatorios{
+    
+    background-color: yellow;
+    
+}
+.export_excel{
+    
+    cursor:pointer;
+    width:35px;
+    height: 35px;
+    display : block;
+}
+
+
+                
+.contenido_inicial:hover { 
+    background-color: yellow;
+                } 
