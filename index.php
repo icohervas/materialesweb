@@ -41,10 +41,6 @@
         $sqlPROY = "SELECT * FROM PROYECTOS";//guardamos la consulta en una variable.
         $fooPROY=$conex->get_consulta($sqlPROY);//ejecutamos la consulta a traves de poo, llamamos al metodo get_consulta de la clase conexion y guardamos en una variable el resultado de la consulta.
 
-        //CONSULTA DE ISOMETRICOS
-        //$sqlISO = "SELECT * FROM ISOMETRICOS";//guardamos la consulta en una variable.
-        //$fooISO=$conex->get_consulta($sqlISO);//ejecutamos la consulta a traves de poo, llamamos al metodo get_consulta de la clase conexion y guardamos en una variable el resultado de la consulta.
-
         //CONSULTA DE MATERIALES TEMPORAL
         $sqlMATTEMP = "SELECT * FROM MATERIAL_PEDIDOS_TEMP";//guardamos la consulta en una variable.
         $fooMATTEMP=$conex->get_consulta($sqlMATTEMP);//ejecutamos la consulta a traves de poo, llamamos al metodo get_consulta de la clase conexion y guardamos en una variable el resultado de la consulta.
@@ -53,43 +49,15 @@
         ?>
 
         <div id="radioeinput" class="radioeinput">
-
-            <div id="cajaradio" class="cajaradio">
-
-                <!--<input type="radio" name="radio_buttonb" id="radio_button" value="1">
-<label  class="menu_juntas">Accesorios</label> 
-
-<input type="radio" name="radio_buttonb" id="radio_button" value="2">
-<label  class="menu_juntas">Juntas</label>  
-
-<input type="radio" name="radio_buttonb" id="radio_button" value="3">
-<label  class="menu_juntas">Pernos</label>  
-
-
-<input type="radio" name="radio_buttonb" id="radio_button" value="4">
-<label  class="menu_juntas">Valvulas</label> 
-
-<input type="radio" name="radio_buttonb" id="radio_button" value="5">
-<label  class="menu_juntas">tuberias</label> 
-
-<input type="radio" name="radio_buttonb" id="radio_button" value="6">
-<label  class="menu_juntas">bridas</label> -->
-
-                <!--<input type="radio" name="radio_buttonb" id="radio_button" value="7">
-<label  class="menu_juntas">Todo</label> -->
-
-
-            </div>
+            <div id="cajaradio" class="cajaradio"></div>
             <div class="cajainput" id="cajainput">
-                <input class="icon-magnifying-glass"  type="text" id="valorBuscado" placeholder="&#xe9dc;     Buscar"  onkeyup="filtrarTablas();" >          
+                <input class="icon-magnifying-glass"  type="text" id="valorBuscado" placeholder="&#xe9dc;     Buscar"  onkeyup="filtrarTablas();" >       
             </div>
-
         </div> 
 
         <div id="caja_principal" class="caja_principal">
             <div id ="caja_materiales" class="caja_materiales"></div>
         </div>
-
         <div id="caja_pedidos_navbar" class="caja_pedidos_navbar">             
             <ul class="nav">
                 <li><input type="button" class ="btn btn-info" value="Inicio" onclick=""/>
@@ -113,10 +81,7 @@
                 <li><input type="button" class ="btn btn-info" value="Copy" onclick="copiarelementos();"/></li>
             </ul>
 
-            <!--<input type="submit" value="Importar Material" class ="btn btn-primary" onclick="abrirVentanaImportarMaterial();"/>
-<input type="submit" value="Importar Material" class ="btn btn-primary" onclick="abrirVentanaImportarMaterial();"/>
-<input type="submit" value="Importar Material" class ="btn btn-primary" onclick="abrirVentanaImportarMaterial();"/>
-<input type="submit" value="Importar Material" class ="btn btn-primary" onclick="abrirVentanaImportarMaterial();"/>-->
+            
             <div id="caja_pedidos_navbar_PROYECTO" class="caja_pedidos_navbar_PROYECTO">
                 PROYECTOS <select  style = "overflow: hidden;" class="SELECT_ISOMETRICO" name='SELECT_PROYECTOS' id='SELECT_PROYECTOS' onchange="mostrarPedidosDeProyectos();">
                 <?php 
@@ -546,54 +511,10 @@
 
             //---------------------------------------------\\\\\\\
 
-            /* function ver_lista_juntas()//funcion que muestra la lista de instrumentos de la refineria de la bbdd a traves de una consulta ajax.
-{
+        
 
-valor1=""; 
-var paginaPhp="LISTA_JUNTAS.php";//guarsamos la pagina "lista_instrumentos.php" en la variable paginaPhp.
-
-ver_lista(valor1,paginaPhp);//ejecutamos la funcion ajax, "enviar_datos_ajax" con los parametros preestablecidos.
-
-}
-function ver_lista_pernos()//funcion que muestra la lista de instrumentos de la refineria de la bbdd a traves de una consulta ajax.
-{
-
-valor1=""; 
-var paginaPhp="LISTA_PERNOS.php";//guarsamos la pagina "lista_instrumentos.php" en la variable paginaPhp.
-
-ver_lista(valor1,paginaPhp);//ejecutamos la funcion ajax, "enviar_datos_ajax" con los parametros preestablecidos.
-
-}
-function ver_lista_valvulas()//funcion que muestra la lista de instrumentos de la refineria de la bbdd a traves de una consulta ajax.
-{
-valor1=""; 
-var paginaPhp="LISTA_VALVULAS.php";//guarsamos la pagina "lista_instrumentos.php" en la variable paginaPhp.
-
-ver_lista(valor1,paginaPhp);//ejecutamos la funcion ajax, "enviar_datos_ajax" con los parametros preestablecidos.
-}
-
-function ver_lista_tuberias()//funcion que muestra la lista de instrumentos de la refineria de la bbdd a traves de una consulta ajax.
-{
-valor1=""; 
-var paginaPhp="LISTA_TUBERIAS.php";//guarsamos la pagina "lista_instrumentos.php" en la variable paginaPhp.
-
-ver_lista(valor1,paginaPhp);//ejecutamos la funcion ajax, "enviar_datos_ajax" con los parametros preestablecidos.
-}
-function ver_lista_bridas()//funcion que muestra la lista de instrumentos de la refineria de la bbdd a traves de una consulta ajax.
-{
-valor1=""; 
-var paginaPhp="LISTA_BRIDAS.php";//guarsamos la pagina "lista_instrumentos.php" en la variable paginaPhp.
-
-ver_lista(valor1,paginaPhp);//ejecutamos la funcion ajax, "enviar_datos_ajax" con los parametros preestablecidos.
-}*/
-
-
-
-
-            function filtrarTablas(){
-
-
-                //var resultado="";
+            function filtrarTablas()
+            {
 
                 var porNombre=document.getElementsByName("radio_buttonb");
                 // Recorremos todos los valores del radio button para encontrar el
@@ -604,76 +525,12 @@ ver_lista(valor1,paginaPhp);//ejecutamos la funcion ajax, "enviar_datos_ajax" co
                         resultado=porNombre[i].value;
                 }
 
-                //alert(resultado);
-
-                /*if (resultado == 1){
-
-//alert("accesorios");
-
-var paginabuscar = "ACCESORIOS.php";
-
-busqueda_coincidencias(1,paginabuscar);
-;
-}
-
-if (resultado == 2){
-
-
-paginabuscar = "juntas.php";
-busqueda_coincidencias(1,paginabuscar);
-}
-
-if (resultado == 3){
-
-
-paginabuscar = "pernos.php";
-busqueda_coincidencias(1,paginabuscar);
-}
-
-if (resultado == 4){
-
-//alert("accesorios");
-
-paginabuscar = "valvulas.php";
-
-//busqueda_coincidencias(1,resultado);
-busqueda_coincidencias(1,paginabuscar);
-}
-
-if (resultado == 5){
-
-//alert("accesorios");
-
-var paginabuscar = "tuberias.php";
-
-//busqueda_coincidencias(1,resultado);
-busqueda_coincidencias(1,paginabuscar);
-}
-if (resultado == 6){
-
-//alert("accesorios");
-
-var paginabuscar = "bridas.php";
-
-//busqueda_coincidencias(1,resultado);
-busqueda_coincidencias(1,paginabuscar);
-}*/
-
-                //if (resultado == 7){
-
-                //alert("accesorios");
-
                 var paginabuscar = "todo_material.php";
 
                 //busqueda_coincidencias(1,resultado);
                 busqueda_coincidencias(1,paginabuscar);
-                //}
-
-
-
-
+ 
             } 
-
 
             //MENU CONTEXTUAL ------------
 
@@ -751,26 +608,6 @@ busqueda_coincidencias(1,paginabuscar);
                 var v1_PROYECTO = document.getElementById("SELECT_PROYECTOS");//capturamos el select donde vamos a mostrar la tabla.
                 var PROYECTOid = v1_PROYECTO.options[v1_PROYECTO.selectedIndex].value;//capturamos el indice seleccionado de la lista select.
                 var PROYECTOSnombre = v1_PROYECTO.options[v1_PROYECTO.selectedIndex].text; //capturamos el texto del indice seleccionado en el select.
-
-                /* alert(REVISIONid);
-
-
-                             var radioseleccionado="";
-
-                            var porNombre=document.getElementsByName("radio_buttonb");
-                            // Recorremos todos los valores del radio button para encontrar el
-                            // seleccionado
-                            for(var i=0;i<porNombre.length;i++)
-                            {
-                                if(porNombre[i].checked)
-                                    radioseleccionado=porNombre[i].value;
-                            }
-
-                            //alert(radioseleccionado);
-
-
-                            //alert(PEDIDOSnombre);*/
-                //alert(id_celda);
                 var paginaPhp="01_propiedades_agregar_material.php";
 
                 abrirVentanaAgregar(id_celda,PROYECTOid,PEDIDOSid,paginaPhp);
@@ -778,9 +615,8 @@ busqueda_coincidencias(1,paginabuscar);
 
             }
 
-            function abrirVentanaPedidosClick(){
-
-
+            function abrirVentanaPedidosClick()
+            {
 
                 //SELECT PROYECTO
                 var v1_PROYECTO = document.getElementById("SELECT_PROYECTOS");//capturamos el select donde vamos a mostrar la tabla.
@@ -1814,11 +1650,7 @@ busqueda_coincidencias(1,paginabuscar);
                 var paginaPhp = "01_Actualizar_material.php";
 
                 enviar_Actualizar_material(idcelda,numid,patron,valorcampotexto,paginaPhp)  
-
-
             }
-
-
             function mostrarPedidosDeProyectos(){
 
                 var valorSelectPedidos=document.getElementById('SELECT_PROYECTOS').options[document.getElementById('SELECT_PROYECTOS').selectedIndex].value;
@@ -1839,15 +1671,13 @@ busqueda_coincidencias(1,paginabuscar);
             }  
 
 
-
             function abrirVentanaProyectos()//funcion que abre la ventana principal para crear instrumentos.
             {
                 opciones="toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=1540,height=630,top=100,left=250";//aplicamos opciones a la ventana nueva.
                 window.open("02_nuevo_proyecto.php","",opciones); //especificamos la ventana que vamos a abrir, y sus atributos a traves de la variable "opciones".
             } 
             function abrirVentanaImportarMaterial(){//funcion que abre la ventana principal para crear instrumentos.
-                /*opciones="toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=680,height=200,top=20,left=250";//aplicamos opciones a la ventana nueva.
-window.open("11_seleccionar_material_isketch.php","",opciones); //especificamos la ventana que vamos a abrir, y sus atributos a traves de la variable "opciones".*/
+               
                 var PROYECTOid=document.getElementById('SELECT_PROYECTOS').options[document.getElementById('SELECT_PROYECTOS').selectedIndex].value;
                 var PEDIDOSid=document.getElementById('SELECT_PEDIDOS').options[document.getElementById('SELECT_PEDIDOS').selectedIndex].value;
                 var paginaPhp="11_seleccionar_material_isketch.php";
