@@ -173,97 +173,95 @@ function ver_lista(valor1,paginaPhp)//creamos la funcion enviar enviar_datos_aja
             //------------------------------------////
             
 function agregar_material_caja(id_celda,paginaPhp)
-{//creamos la funcion enviar enviar_datos_ajax para enviar la peticion de ajax al servidor.                
-var ResultadoListaSTEMP = document.getElementById("caja_bom");//guardamos en resultado el nodo div con id info 
-var xmlhttp;//creamos la variable xmlhttp              
-if (window.XMLHttpRequest){//el valor de xmlhttp va a depender del navegador que estemos utilizando,si se trata de un navegador antiguo o moderno.
-xmlhttp = new XMLHttpRequest();
-}else
-{
-xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-}               
-//alert(id_celda);                
-var nuevoValor=id_celda;
-var informacionDelUsuario = "material_id=" + nuevoValor;//guardamos el valor de la variable numero, en la variable informacion del usuario.
-xmlhttp.onreadystatechange = function(){//dentro de la propiedad onreadystatechange, creamos una funcion anonima.
-if(xmlhttp.readyState == 4 && xmlhttp.status == 200){//si la operacion ha sido finalizada y exitosa.
-var mensaje = xmlhttp.responseText;//guardamos el mensaje del servidor , en la variable mensaje
-ResultadoListaSTEMP.innerHTML = mensaje;//mostramos a traves de la propiedad innerhtml del div info la informacion devuelta por el servidor.
-//alert(mensaje);
-}
-} 
-xmlhttp.open("POST",paginaPhp,true);//llamamos al metodo open del objeto xmlhttp, con tres parametros metodo de envio,pagina del servidor donde se evia el formulario, y true para indicar que es asincrono.
-xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");//llamamos al metodo setrequestheader, para poder enviar la informacion al servidor.
-xmlhttp.send(informacionDelUsuario);//escribimos el objeto xmlhttp, con el metodo send, incluyendo la informaicon del usuario.
-}
+    {//creamos la funcion enviar enviar_datos_ajax para enviar la peticion de ajax al servidor.                
+        var ResultadoListaSTEMP = document.getElementById("caja_bom");//guardamos en resultado el nodo div con id info 
+        var xmlhttp;//creamos la variable xmlhttp              
+            if (window.XMLHttpRequest)
+                {//el valor de xmlhttp va a depender del navegador que estemos utilizando,si se trata de un navegador antiguo o moderno.
+                    xmlhttp = new XMLHttpRequest();
+                }else
+                {
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }               
+        //alert(id_celda);                
+        var nuevoValor=id_celda;
+        var informacionDelUsuario = "material_id=" + nuevoValor;//guardamos el valor de la variable numero, en la variable informacion del usuario.
+        xmlhttp.onreadystatechange = function()
+        {//dentro de la propiedad onreadystatechange, creamos una funcion anonima.
+            if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                {//si la operacion ha sido finalizada y exitosa.
+                    var mensaje = xmlhttp.responseText;//guardamos el mensaje del servidor , en la variable mensaje
+                    ResultadoListaSTEMP.innerHTML = mensaje;//mostramos a traves de la propiedad innerhtml del div info la informacion devuelta por el servidor.
+                    //alert(mensaje);
+                }
+        } 
+        xmlhttp.open("POST",paginaPhp,true);//llamamos al metodo open del objeto xmlhttp, con tres parametros metodo de envio,pagina del servidor donde se evia el formulario, y true para indicar que es asincrono.
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");//llamamos al metodo setrequestheader, para poder enviar la informacion al servidor.
+        xmlhttp.send(informacionDelUsuario);//escribimos el objeto xmlhttp, con el metodo send, incluyendo la informaicon del usuario.
+    }
 
             //-------------------------------------
-            function busqueda_coincidencias(nropagina,paginabuscar){//creamos la funcion enviar enviar_datos_ajax para enviar la peticion de ajax al servidor.
-                
+function busqueda_coincidencias(nropagina,paginabuscar)
+    {//creamos la funcion enviar enviar_datos_ajax para enviar la peticion de ajax al servidor.
                 //donde se mostrará los registros
-                var ResultadoListaS = document.getElementById("caja_materiales");
-               
-                var xmlhttp;//creamos la variable xmlhttp
+        var ResultadoListaS = document.getElementById("caja_materiales");
+        var xmlhttp;//creamos la variable xmlhttp
                 
-                if (window.XMLHttpRequest){//el valor de xmlhttp va a depender del navegador que estemos utilizando,si se trata de un navegador antiguo o moderno.
-                    xmlhttp = new XMLHttpRequest();
-                    
-                }else{
-                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-                }
-                
-                var valorBuscado = document.getElementById("valorBuscado").value;//guardamos el valor de la caja de texto en la variable a.
-                var paginabusqueda = paginabuscar;
-              
-               //ResultadoListaS.innerHTML= '<img src="anim.gif">';
-               var informacionDelUsuario = "valorBuscado="+ valorBuscado + "&pag=" + nropagina;//guardamos el valor de la variable numero, en la variable informacion del usuario.
-                
-                xmlhttp.onreadystatechange = function(){//dentro de la propiedad onreadystatechange, creamos una funcion anonima.
-                    if(xmlhttp.readyState == 4 && xmlhttp.status == 200){//si la operacion ha sido finalizada y exitosa.
+        if (window.XMLHttpRequest)
+            {//el valor de xmlhttp va a depender del navegador que estemos utilizando,si se trata de un navegador antiguo o moderno.
+                xmlhttp = new XMLHttpRequest();
+            }else{
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        var valorBuscado = document.getElementById("valorBuscado").value;//guardamos el valor de la caja de texto en la variable a.
+        var paginabusqueda = paginabuscar;
+        //ResultadoListaS.innerHTML= '<img src="anim.gif">';
+        var informacionDelUsuario = "valorBuscado="+ valorBuscado + "&pag=" + nropagina;//guardamos el valor de la variable numero, en la variable informacion del usuario.
+        xmlhttp.onreadystatechange = function()
+            {//dentro de la propiedad onreadystatechange, creamos una funcion anonima.
+                if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                    {//si la operacion ha sido finalizada y exitosa.
                         var mensaje = xmlhttp.responseText;//guardamos el mensaje del servidor , en la variable mensaje
                         ResultadoListaS.innerHTML = mensaje;//mostramos a traves de la propiedad innerhtml del div info la informacion devuelta por el servidor.
                     }
-                }
-                
-                xmlhttp.open("POST",paginabusqueda,true);//llamamos al metodo open del objeto xmlhttp, con tres parametros metodo de envio,pagina del servidor donde se evia el formulario, y true para indicar que es asincrono.
-                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");//llamamos al metodo setrequestheader, para poder enviar la informacion al servidor.
-                xmlhttp.send(informacionDelUsuario);//escribimos el objeto xmlhttp, con el metodo send, incluyendo la informaicon del usuario.
             }
-                
- 
+        xmlhttp.open("POST",paginabusqueda,true);//llamamos al metodo open del objeto xmlhttp, con tres parametros metodo de envio,pagina del servidor donde se evia el formulario, y true para indicar que es asincrono.
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");//llamamos al metodo setrequestheader, para poder enviar la informacion al servidor.
+        xmlhttp.send(informacionDelUsuario);//escribimos el objeto xmlhttp, con el metodo send, incluyendo la informaicon del usuario.
+    }
       //----------------------------------------------------------------------------------------
       //
       function vaciarTabla(valor1,paginaPhp){//creamos la funcion enviar enviar_datos_ajax para enviar la peticion de ajax al servidor.
                 
-                var xmlhttp;//creamos la variable xmlhttp
-                
-                if (window.XMLHttpRequest){//el valor de xmlhttp va a depender del navegador que estemos utilizando,si se trata de un navegador antiguo o moderno.
-                    xmlhttp = new XMLHttpRequest();
-                    
-                }else{
-                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-                }
-                
-                //var numero = document.getElementById("telefono").value;//guardamos el valor de la caja de texto en la variable a.
-              
-               //alert(valor1);
-               //alert(unidad);
-               var nuevoValor=valor1;
-              
-               var informacionDelUsuario = "unidad_id=" + nuevoValor;//guardamos el valor de la variable numero, en la variable informacion del usuario.
-                
-                xmlhttp.onreadystatechange = function(){//dentro de la propiedad onreadystatechange, creamos una funcion anonima.
-                    if(xmlhttp.readyState == 4 && xmlhttp.status == 200){//si la operacion ha sido finalizada y exitosa.
-                        var mensaje = xmlhttp.responseText;//guardamos el mensaje del servidor , en la variable mensaje
-          
-                    }
-                 
-                }
-                
-                xmlhttp.open("POST",paginaPhp,true);//llamamos al metodo open del objeto xmlhttp, con tres parametros metodo de envio,pagina del servidor donde se evia el formulario, y true para indicar que es asincrono.
-                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");//llamamos al metodo setrequestheader, para poder enviar la informacion al servidor.
-                xmlhttp.send(informacionDelUsuario);//escribimos el objeto xmlhttp, con el metodo send, incluyendo la informaicon del usuario.
-            }
+    var xmlhttp;//creamos la variable xmlhttp
+
+    if (window.XMLHttpRequest){//el valor de xmlhttp va a depender del navegador que estemos utilizando,si se trata de un navegador antiguo o moderno.
+        xmlhttp = new XMLHttpRequest();
+
+    }else{
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    //var numero = document.getElementById("telefono").value;//guardamos el valor de la caja de texto en la variable a.
+
+   //alert(valor1);
+   //alert(unidad);
+   var nuevoValor=valor1;
+
+   var informacionDelUsuario = "unidad_id=" + nuevoValor;//guardamos el valor de la variable numero, en la variable informacion del usuario.
+
+    xmlhttp.onreadystatechange = function(){//dentro de la propiedad onreadystatechange, creamos una funcion anonima.
+        if(xmlhttp.readyState == 4 && xmlhttp.status == 200){//si la operacion ha sido finalizada y exitosa.
+            var mensaje = xmlhttp.responseText;//guardamos el mensaje del servidor , en la variable mensaje
+
+        }
+
+    }
+
+    xmlhttp.open("POST",paginaPhp,true);//llamamos al metodo open del objeto xmlhttp, con tres parametros metodo de envio,pagina del servidor donde se evia el formulario, y true para indicar que es asincrono.
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");//llamamos al metodo setrequestheader, para poder enviar la informacion al servidor.
+    xmlhttp.send(informacionDelUsuario);//escribimos el objeto xmlhttp, con el metodo send, incluyendo la informaicon del usuario.
+}
        //------------------------------------------------------------------ 
        
        //---------------------------------------------\\\\\\\
